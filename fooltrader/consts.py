@@ -182,7 +182,7 @@ SECURITY_TYPE_CRYPTO = 'cryptocurrency'
 # CRYPTOCURRENCY_EXCHANGES = ["binance", "okex", "huobipro", "bitfinex", "bithumb", "gdax", "kraken", "hitbtc", "lbank",
 #                             "bitz", "bibox", "zb", "bitstamp"]
 
-CRYPTOCURRENCY_EXCHANGES = ["binance", "huobipro", "bitfinex"]
+CRYPTOCURRENCY_EXCHANGES = ["binance", "huobipro", "bitfinex", "eos_contract"]
 
 # CRYPTOCURRENCY_BASE = ["BTC", "ETH", "XRP", "BCH", "EOS", "LTC", "XLM", "ADA", "IOTA", "TRX", "NEO", "DASH", "XMR",
 #                        "BNB", "ETC", "QTUM", "ONT"]
@@ -191,6 +191,9 @@ CRYPTOCURRENCY_BASE = ["BTC", "ETH", "XRP", "BCH", "EOS"]
 
 CRYPTOCURRENCY_PAIR = [("{}/{}".format(item, "USDT")) for item in CRYPTOCURRENCY_BASE] + \
                       [("{}/{}".format(item, "USD")) for item in CRYPTOCURRENCY_BASE]
+
+CRYPTOCURRENCY_CODE = [("{}-{}".format(item, "USDT")) for item in CRYPTOCURRENCY_BASE] + \
+                      [("{}-{}".format(item, "USD")) for item in CRYPTOCURRENCY_BASE]
 
 SECURITY_TYPE_MAP_EXCHANGES = {
     "stock": ['sh', 'sz'],
